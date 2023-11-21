@@ -1,0 +1,7 @@
+nohup.out
+out
+*.tgz
+terraform.tfstate
+.terraform.lock.hcl
+terraform.tfstate.backup
+.terraform

@@ -1,0 +1,8 @@
+releases:
+- name: hello-world
+  namespace: default
+  chart: oci://registry-1.docker.io/bitnamicharts/nginx
+  version: 15.4.2
+  set:
+  - name: replicaCount
+    value: 2
