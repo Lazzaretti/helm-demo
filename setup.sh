@@ -17,6 +17,7 @@ cd /tmp
 wget https://github.com/helmfile/helmfile/releases/download/v0.158.1/helmfile_0.158.1_linux_amd64.tar.gz
 tar -xzvf /tmp/helmfile_0.158.1_linux_amd64.tar.gz
 sudo cp helmfile /usr/local/bin/
+sudo chmod 755 /usr/local/bin/helmfile
 )
 
 ## terraform
