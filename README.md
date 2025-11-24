@@ -71,8 +71,19 @@ helm upgrade hello-world oci://registry-1.docker.io/bitnamicharts/nginx -f hello
 
 ### Show diff
 
+#### Helm 3
+
 ```sh
 helm plugin install https://github.com/databus23/helm-diff
+helm diff upgrade hello-world oci://registry-1.docker.io/bitnamicharts/nginx -f hello-world-values.yaml
+```
+
+#### Helm 4
+
+In Helm 4, we currently need the flag `--verify=false` for the diff plugin (see https://github.com/databus23/helm-diff?tab=readme-ov-file#install).
+
+```sh
+helm plugin install https://github.com/databus23/helm-diff --verify=false
 helm diff upgrade hello-world oci://registry-1.docker.io/bitnamicharts/nginx -f hello-world-values.yaml
 ```
 
