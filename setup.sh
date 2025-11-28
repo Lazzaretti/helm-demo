@@ -9,7 +9,7 @@ nohup kubectl port-forward --pod-running-timeout=24h -n ingress-nginx service/in
 # dependencies
 
 ## helm diff
-helm plugin install https://github.com/databus23/helm-diff
+helm plugin install https://github.com/databus23/helm-diff --verify=false
 
 ## helmfile
 (
