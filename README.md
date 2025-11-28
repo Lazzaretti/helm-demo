@@ -99,6 +99,25 @@ helm uninstall hello-world
 helmfile apply
 ```
 
+## Helm v4
+
+Try out Helm v4 new features like
+
+- Multi values files possible
+- improved wait -> Helm will wait until each component is truly operational.
+- status
+- make use of digest
+
+```sh
+./demo-v4.sh
+# multi values & improved wait
+helm install hello-world ./charts/demo-v4 -f ./charts/demo-v4/values.yaml -f ./charts/demo-v4/values.multi.yaml --wait
+# improved status
+helm status hello-world
+# digest
+helm install hello-digest oci://registry-1.docker.io/bitnamicharts/nginx@sha256:2dd908ec16b43f1beb3f29b64ae49d3a7af0a17afdf85792aee9e99311d75a83 -f hello-world-values.yaml
+```
+
 ## Helm with Terraform
 
 (Make sure to uninstall the old chart first if you haven't done so already: `helm uninstall hello-world`)
